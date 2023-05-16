@@ -1,0 +1,8 @@
+FROM node
+WORKDIR /usr/src/app
+COPY . .
+EXPOSE 3000
+RUN npm install
+RUN npm run compile
+ENV NODE_ENV="production"
+CMD ["node", "./dist/start_server.js"]
