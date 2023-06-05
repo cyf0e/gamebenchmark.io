@@ -24,7 +24,10 @@ export const GraphBar = ({
         >
           <span style={{ display: "inline-block", width: "10%" }}>{title}</span>
           <div style={{ width: "85%" }}>
-            <div style={{ width: "90%", display: "inline-block" }}>
+            <div
+              className="graph-container"
+              style={{ width: "90%", display: "inline-block" }}
+            >
               <div
                 style={{
                   width: `${(value / maxValue) * 90}%`,
@@ -32,7 +35,7 @@ export const GraphBar = ({
                   backgroundColor: color,
                   display: "inline-block",
                   borderRadius: "20px",
-                  boxShadow:"1px 1px 2px rgba(0,0,0,.6)"
+                  boxShadow: "1px 1px 2px rgba(0,0,0,.6)",
                 }}
               ></div>
               <span style={{ display: "inline-block", margin: "0 5px" }}>

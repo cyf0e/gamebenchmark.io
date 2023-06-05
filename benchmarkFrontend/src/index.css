@@ -214,6 +214,19 @@ form label {
     align-items: center;
   }
 }
+@media screen and (width<640px) {
+  .item-details-container {
+    padding: 0 0.5rem;
+  }
+  .graph-container {
+    width: 90% !important;
+    display: flex !important;
+    align-items: center;
+  }
+  select {
+    width: 50% !important;
+  }
+}
 /* Works on Firefox */
 * {
   scrollbar-width: thin;
