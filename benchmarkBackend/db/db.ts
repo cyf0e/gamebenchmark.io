@@ -13,7 +13,6 @@ class db {
       database: process.env.DATABASE_NAME,
       password: process.env.DATABASE_PASSWORD,
     };
-    console.log(this.config);
     this.pool = new Pool(this.config);
   }
   resultOrUndefined(res: QueryResult) {
