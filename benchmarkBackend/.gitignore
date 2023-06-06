@@ -3,3 +3,5 @@ package-lock.json
 dist
 client
 .tsbuildinfo
+.env
+.env.local

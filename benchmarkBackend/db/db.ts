@@ -7,11 +7,13 @@ class db {
   config: PoolConfig;
   constructor() {
     this.config = {
+      port: (process.env.DATABASE_PORT as number | undefined) || 5432,
       user: process.env.DATABASE_USER,
       host: process.env.DOCKER_DATABASE_URL || process.env.DATABASE_URL,
       database: process.env.DATABASE_NAME,
       password: process.env.DATABASE_PASSWORD,
     };
+    console.log(this.config);
     this.pool = new Pool(this.config);
   }
   resultOrUndefined(res: QueryResult) {

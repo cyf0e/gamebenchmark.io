@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-	  "start":"node ./dist/server.js",
+    "start": "node ./dist/start_server.js",
     "test-u": "mocha --check-leaks ./dist/test/unit.js",
     "test-i": "sudo env \"PATH=$PATH\" ./scripts/test-i.bash",
     "integration-test": "mocha ./dist/test/integration.js --exit --check-leaks",
