@@ -10,9 +10,8 @@ import gameRouter from "./routers/gameRoute";
 const app = express();
 
 app.use(helmet());
-if (process.env.NODE_ENV !== "production") {
-  app.use(morgan("dev"));
-}
+app.use(morgan(process.env.NODE_ENV == "production" ? "combined" : "dev"));
+
 //TODO: move this inside of routers because it currently errors a get request if it has invalid json body.
 app.use(express.json());
 app.disable("x-powered-by");
